@@ -1,4 +1,7 @@
 # Getting Started with Create React App
+This project is currently work in progress
+
+## About
 A platform offering JavaScript LeetCode-style coding questions with a built-in code editor and test cases, along with resources on design patterns, JavaScript and React quizzes, and system design interview questions.
 
 ## Tech Stack
