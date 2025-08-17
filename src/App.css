@@ -1,38 +1,149 @@
-.App {
-  text-align: center;
+/** Header **/
+header {
+  background-color: #1e1e1e; /* matches vs-dark editor background */
+  color: #ffffff; /* readable text */
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  text-align: left;
+  border-bottom: 1px solid #333; /* subtle separation from editor */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* slight depth */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/** Editor **/
+.mainEditor {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+  background: #1e1e1e;
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mainEditor > button {
+  align-self: center;
+  margin: 10px 20px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
   color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.mainEditor > button:hover {
+  background: #1d4ed8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.coding-editor {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.questions {
+  flex: 1;
+  background: #111827;
+  padding: 16px;
+  border-right: 1px solid #374151;
+  overflow-y: auto;
+}
+
+.questions h2 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  color: #fbbf24;
+}
+
+.pre-wrapper {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.editor {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  background: #1e293b;
+}
+
+.editor .monaco-editor {
+  border-bottom: 1px solid #374151;
+}
+
+.editor .questions {
+  background: #0f172a;
+  padding: 12px;
+  border-top: 1px solid #374151;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+
+/** List LeetCode Questions **/
+
+.leetcodeMain {
+  display: flex;
+  flex-direction: column; /* keeps questions stacked vertically */
+  gap: 1rem; /* spacing between questions */
+  padding: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.listQuestion {
+  display: flex;
+  justify-content: space-between; /* distributes question text on left, link on right */
+  align-items: center;
+  padding: 0.8rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* .listQuestion:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+} */
+
+.difficulty {
+  margin-left: 0.5rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.difficulty.easy {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.difficulty.medium {
+  background: #fef9c3;
+  color: #854d0e;
+}
+
+.difficulty.hard {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.listQuestion a {
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.listQuestion a:hover {
+  text-decoration: underline;
 }
