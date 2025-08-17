@@ -10,8 +10,8 @@ function App() {
       <Header />
       <Router>
         <Routes>
-          <Route path="/" element={<ListLeetCodeQuestions/>}/>
-          <Route path="/editor/:slug" element={<CodeEditor/>}/>
+          <Route path="/JStack" element={<ListLeetCodeQuestions/>}/>
+          <Route path="/JStack/editor/:slug" element={<CodeEditor/>}/>
         </Routes>
      
       </Router>

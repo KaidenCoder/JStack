@@ -16,7 +16,7 @@ export default function ListLeetCodeQuestions(){
                     <div>{idx+1}. {data.questionName} <a href={data.link} target="blank">link</a> <span className={`difficulty ${data.difficulty.toLowerCase()}`}>
     {data.difficulty}
   </span></div>
-                    <Link className="editor-link" onClick={() => setQuestionData(data)} to={`/editor/${slug}`} state={{data}}>Local Code Editor</Link>
+                    <Link className="editor-link" onClick={() => setQuestionData(data)} to={`/JStack/editor/${slug}`} state={{data}}>Local Code Editor</Link>
                 </div>
             )})}
         </main>
