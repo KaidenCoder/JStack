@@ -1,14 +1,39 @@
 /** Header **/
-header {
-  background-color: #1e1e1e; /* matches vs-dark editor background */
-  color: #ffffff; /* readable text */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e1e1e;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 2px solid #444;
+}
+
+/* Logo */
+.logo {
   font-size: 1.5rem;
   font-weight: bold;
-  padding: 1rem 2rem;
-  text-align: left;
-  border-bottom: 1px solid #333; /* subtle separation from editor */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* slight depth */
+  margin: 0;
 }
+
+/* Navigation container */
+.nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+/* Links */
+.nav-link {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
 
 
 
@@ -146,4 +171,70 @@ header {
 
 .listQuestion a:hover {
   text-decoration: underline;
+}
+
+/** Design patterns **/
+/* Container */
+.patterns {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Section title */
+.patterns-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+/* Card layout */
+.patterns-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pattern-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Card headings */
+.pattern-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+/* Description */
+.pattern-description {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+
+/* Code block */
+.pattern-code {
+  background: #1e1e1e;
+  color: #f8f8f2;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-family: "Courier New", monospace;
+  font-size: 0.9rem;
+  overflow-x: auto;
+  white-space: pre-wrap; /* wraps long lines */
+  word-wrap: break-word;
 }
